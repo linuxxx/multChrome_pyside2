@@ -9,3 +9,5 @@ Chrome Multiple Manager
 4.https://github.com/lokkon/multChrome 老版本用的是tkinter，比较丑
 
 ![image](https://raw.githubusercontent.com/lokkon/multChrome_pyside2/main/ui/main.png)
+
+打包：pyinstaller -F -w --hidden-import PySide2.QtXml -i icon.ico multChrome.py

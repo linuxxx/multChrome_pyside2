@@ -109,16 +109,16 @@ class Draw():
                     try:
                         self.chrome_path = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
                         chrome_url = self.chrome_path + '  --profile-directory="%s" ' % user.text()
-                        win32p.CreateProcess(None, chrome_url, None, None, 0, win32p.CREATE_NO_WINDOW, None,
+                        win32p.CreateProcess(None, self.chrome_url, None, None, 0, win32p.CREATE_NO_WINDOW, None,
                                                    None, win32p.STARTUPINFO())
                     except:
                         self.chrome_path = "C:\Program Files\Google\Chrome\Application\chrome.exe"
                         chrome_url = self.chrome_path + '  --profile-directory="%s" ' % user.text()
-                        win32p.CreateProcess(None, chrome_url, None, None, 0, win32p.CREATE_NO_WINDOW, None,
+                        win32p.CreateProcess(None, self.chrome_url, None, None, 0, win32p.CREATE_NO_WINDOW, None,
                                                    None, win32p.STARTUPINFO())
                 else:
                     chrome_url = self.chrome_path + '  --profile-directory="%s" ' % user.text()
-                    win32p.CreateProcess(None, chrome_url, None, None, 0, win32p.CREATE_NO_WINDOW, None,
+                    win32p.CreateProcess(None, self.chrome_url, None, None, 0, win32p.CREATE_NO_WINDOW, None,
                                          None, win32p.STARTUPINFO())
             except:
                 QMessageBox.warning(self.ui, '错误', '请检查Chrome路径')
